@@ -1,0 +1,55 @@
+questions = [
+    {
+        "question": "1. What is the capital of India?",
+        "options": ["A. Mumbai", "B. Delhi", "C. Chennai", "D. Kolkata"],
+        "answer": "B"
+    },
+    {
+        "question": "2. Which language is used for web development?",
+        "options": ["A. Python", "B. Java", "C. HTML", "D. C++"],
+        "answer": "C"
+    },
+    {
+        "question": "3. Which keyword is used to define a function in Python?",
+        "options": ["A. function", "B. define", "C. def", "D. fun"],
+        "answer": "C"
+    },
+    {
+        "question": "4. What is the output of 5 + 3?",
+        "options": ["A. 53", "B. 8", "C. 15", "D. 5"],
+        "answer": "B"
+    },
+    {
+        "question": "5. Which symbol is used for comments in Python?",
+        "options": ["A. //", "B. <!-- -->", "C. #", "D. **"],
+        "answer": "C"
+    }
+]
+
+score = 0
+
+print("Welcome to the Online Quiz Application")
+print("---------------------------------------")
+
+for q in questions:
+    print("\n" + q["question"])
+    for option in q["options"]:
+        print(option)
+
+    user_answer = input("Enter your answer (A/B/C/D): ").upper()
+
+    if user_answer == q["answer"]:
+        print("Correct!")
+        score += 1
+    else:
+        print("Wrong! Correct answer is", q["answer"])
+
+print("\nQuiz Completed!")
+print("Your Score:", score, "out of", len(questions))
+
+if score >= 4:
+    print("Excellent performance!")
+elif score >= 2:
+    print("Good job! Keep practicing.")
+else:
+    print("Need more practice. Try again!")
